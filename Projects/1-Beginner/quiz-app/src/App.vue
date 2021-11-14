@@ -14,6 +14,13 @@
   padding: 0;
   outline: 0;
   box-sizing: border-box;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+:root {
+  --primary: #948474;
+  --secondary: #1e3cd6;
+  --tertiary: #afbdd4;
 }
 
 #app {
