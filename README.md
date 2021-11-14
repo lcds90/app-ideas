@@ -15,7 +15,7 @@ required to complete them.
 | --------------------------------------------------------------------------------- | ---------------------------------------------------------- | ---------- |
 | [Bin2Dec](./Projects/1-Beginner/Bin2Dec-App.md)                                   | Binary-to-Decimal number converter                         | ❌ |
 | [Border Radius Previewer](./Projects/1-Beginner/border-radius-previewer)       | Preview how CSS3 border-radius values affect an element    | ✅ [Deploy](https://lcds90-border-radius-previewer.vercel.app/) |
-| [Calculator](./Projects/1-Beginner/calculator)                             | Calculator                                                 | 🚧 WIP |
+| [Calculator](./Projects/1-Beginner/calculator)                             | Calculator                                                 | [🚧 WIP](https://lcds90-calculator.vercel.app/) |
 | [Christmas Lights](./Projects/1-Beginner/Christmas-Lights-App.md)                 | Simulate a string of Christmas lights                      | ❌ |
 | [Cause Effect App](./Projects/1-Beginner/Cause-Effect-App.md)                     | Click list item to display item details                    | ❌ |
 | [Color Cycle](./Projects/1-Beginner/Color-Cycle-App.md)                           | Cycle a color value through incremental changes            | ❌ |
@@ -36,7 +36,7 @@ required to complete them.
 | [Pearson Regression](./Projects/1-Beginner/Pearson-Regression-App.md)             | Calculate the correlation coefficient for two sets of data | ❌ |
 | [Pomodoro Clock](./Projects/1-Beginner/Pomodoro-Clock.md)                         | Task timer to aid personal productivity                    | ❌ |
 | [Product Landing Page](./Projects/1-Beginner/Product-Landing-Page.md)             | Showcase product details for possible buyers               | ❌ |
-| [Quiz App](./Projects/1-Beginner/Quiz-App.md)                                     | Test your knowledge by answering questions                 | ❌ |
+| [Tech Quiz App](./Projects/1-Beginner/quiz-app)                                     | Test your knowledge by answering questions                 | [🚧 WIP](https://lcds90-tech-quiz.vercel.app/) |
 | [Recipe App](./Projects/1-Beginner/Recipe-App.md)                                 | Recipe                                                     | ❌ |
 | [Random Meal Generator](./Projects/1-Beginner/Random-Meal-Generator.md)           | Generate random meals                                      | ❌ |
 | [Random Number Generator](./Projects/1-Beginner/Random-Number-Generator.md)       | Generate random number between range.                      | ❌ |
