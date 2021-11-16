@@ -7,12 +7,15 @@ const questions = {
   mutations: {},
   actions: {},
   getters: {
-    randomTechs: (state) => {
-      const shuffledArr = state.list.sort(() => 0.5 - Math.random());
-      return {
-        correct: shuffledArr[0],
-        wrongs: shuffledArr.slice(1, 10),
-      };
+    randomTechs: ({ list }) => {
+      const shuffledArr = list
+        .sort(() => 0.5 - Math.random())
+        .map((tech) => ({ ...tech, correct: false }))
+        .slice(0, 10);
+
+      shuffledArr[Math.floor(Math.random() * shuffledArr.length)].correct = true;
+
+      return shuffledArr;
     },
   },
 };

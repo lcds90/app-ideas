@@ -7,6 +7,7 @@ export function Calculator() {
   const values = useSelector(selectCount);
   const dispatch = useDispatch();
   const [count, setCount] = useState(0);
+  const [calculus, setCalculus] = useState([]);
 
   return (
     <section className={styles.section}>
