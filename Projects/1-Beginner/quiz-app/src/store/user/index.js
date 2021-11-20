@@ -12,10 +12,10 @@ const user = {
         state.answers = [...state.answers, payload.answer];
       };
       const fail = () => {
+        state.score += payload.count;
         state.failed += 1;
       };
-      if (payload.correct) hit();
-      else fail();
+      return payload.answer.correct ? hit() : fail();
     },
   },
   actions: {},

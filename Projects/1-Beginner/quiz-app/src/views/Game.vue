@@ -74,14 +74,15 @@ main {
           @click="checkAnswer($event, tech)"
           v-show="tech"
         >
-          {{ tech.name }}
+          {{ tech.correct ? `${tech.name} correta...` : tech.name }}
           <i :class="tech.class" />
         </button>
       </article>
     </section>
     <section>
       <h2>Placar</h2>
-      <p>Acertos: {{ user.score }}</p>
+      <p>Pontuação: {{ user.score }}</p>
+      <p>Acertos: {{ user.answers.length }}</p>
       <p>Erros: {{ user.failed }}</p>
     </section>
   </main>
@@ -108,7 +109,6 @@ export default {
       return hideNameFromDescription;
     },
     checkAnswer(e, answer) {
-      console.log(answer);
       e.preventDefault();
       const count = answer.correct ? 10 : -10;
       const payload = {
@@ -117,17 +117,14 @@ export default {
       };
 
       const win = () => {
-        alert('win');
         this.$store.commit('checkIfAnswerIsCorrect', payload);
       };
 
       const fail = () => {
-        alert('fail');
         this.$store.commit('checkIfAnswerIsCorrect', payload);
       };
 
-      if (answer.correct) win();
-      else fail();
+      return answer.correct ? win() : fail();
     },
   },
 };
