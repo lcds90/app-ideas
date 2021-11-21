@@ -8,13 +8,15 @@ const questions = {
   actions: {},
   getters: {
     randomTechs: ({ list }) => {
-      const shuffledArr = list
-        .sort(() => 0.5 - Math.random())
-        .map((tech) => ({ ...tech, correct: false }))
-        .slice(0, 10);
+      const shuffledArr = () => {
+        const arr = list
+          .sort(() => 0.5 - Math.random())
+          .map((tech) => ({ ...tech, correct: false }))
+          .slice(0, 9);
 
-      shuffledArr[Math.floor(Math.random() * shuffledArr.length)].correct = true;
-
+        arr[Math.floor(Math.random() * shuffledArr.length)].correct = true;
+        return arr;
+      };
       return shuffledArr;
     },
   },
