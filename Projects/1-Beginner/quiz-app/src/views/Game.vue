@@ -102,6 +102,7 @@ main {
     </section>
     <section>
       <h2>Placar</h2>
+      <p>{{ user.name }}</p>
       <p>Pontuação: {{ user.score }}</p>
       <p>Acertos: {{ user.answers.length }}</p>
       <p>Erros: {{ user.failed }}</p>
@@ -144,8 +145,9 @@ export default {
       return answer.correct ? win() : fail();
     },
     checkIfGameIsValid() {
-      if (this.round === 5) this.$router.push('/ranking');
-      return this.$store.getters.randomTechs();
+      if (this.round < 5) return this.$store.getters.randomTechs();
+      this.$store.commit('gameFinished');
+      return this.$router.push('/ranking');
     },
     generateDescription() {
       const getRightAnwser = this.randomTechs.find((tech) => tech.correct);

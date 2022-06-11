@@ -66,6 +66,10 @@ a {
     <section class="explanation">
       <h1>Seja bem vindo ao jogo de adivinhação de ícones!</h1>
       <article>
+        <label for="username">
+          <input type="text" id="username" v-model="username" />
+          Seu nome de usuário será registrado no ranking como: {{ username }}
+        </label>
         <h2>Como funciona o jogo</h2>
         <p>
           O jogo funciona como forma de exercitação de memória referente a
@@ -80,7 +84,7 @@ a {
           <br />
           Sinta-se a vontade para apoiar o projeto
         </p>
-        <router-link to="/game">Play</router-link>
+        <router-link v-on:click="setUsername" to="/game">Play</router-link>
       </article>
     </section>
   </main>
@@ -93,6 +97,17 @@ export default {
   name: 'Home',
   components: {
     Icons,
+  },
+  data() {
+    return {
+      username: '',
+    };
+  },
+  methods: {
+    setUsername() {
+      const payload = { username: this.username };
+      this.$store.commit('setUsername', payload);
+    },
   },
 };
 </script>
