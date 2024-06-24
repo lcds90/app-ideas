@@ -8,8 +8,8 @@ As a developer you can create a quiz application for testing coding skills of ot
 
 ## User Stories
 
--   [ ] User can start the quiz by pressing a `button`
--   [ ] User can see a question with 4 possible answers
+-   [x] User can start the quiz by pressing a `button`
+-   [x] User can see a question with 4 possible answers
 -   [ ] After selecting an answer, display the next question to the User. Do this until the quiz is finished
 -   [ ] At the end, the User can see the following statistics
     -   Time it took to finish the quiz
@@ -31,3 +31,5 @@ As a developer you can create a quiz application for testing coding skills of ot
 -   [Quiz app built with React](http://tranquil-beyond-43849.herokuapp.com/) (wait for it to load as it is hosted on Heroku)
 -   [Quiz app interface](https://codepen.io/FlorinPop17/full/qqYNgW)
 -   [Quiz Progressive Web App built with React](https://github.com/SafdarJamal/quiz-app)
+
+TODO As perguntas no quiz será adivinhar icone ou pela sua descrição substituindo a chave name dentro da info
